@@ -1,0 +1,18 @@
+.login-form{
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.login-form input, .login-form label{
+	width: 100%;
+	display: block;
+}
+
+.login-form label{
+	padding-bottom: 5px;
+	font-size: 1.2em;
+}
+
+.login-form .login-group{
+	padding: 5px;
+}
