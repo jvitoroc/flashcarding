@@ -1,3 +1,56 @@
-.wrap{
+form{
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+
+.form-error{
+	color: red;
+}
+
+.flashcards{
+	margin-top: 50px;
+}
+
+.word{
+	font-size: 1.3em;
+}
+
+.card-back, .card-face{
+	height: 100%;
 	width: 100%;
+	border: 1px solid black;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.card-back{
+	display: none !important;
+	position: relative;
+}
+
+.card-back .google{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+.flashcard-item.back .card-face{
+	display: none !important;
+}
+
+.flashcard-item.back .card-back{
+	display: flex !important;
+}
+
+.flashcard-list{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.flashcard-item{
+	border-radius: 5px;
+	padding: 10px;
+	height: 150px;
 }

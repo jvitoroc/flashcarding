@@ -2,32 +2,35 @@
 <html>
 	<head>
 		<title>Login</title>
-		<link rel="stylesheet" href="/assets/css/bootstrap-grid.min.css">
+		<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/assets/css/framework.css">
-		<link rel="stylesheet" href="/assets/css/login.css">
 	</head>
 	<body>
-		<div class="wrap">
-			<form class="login-form" method="post" action="/register">
-				<h1>REGISTER</h1>
-				{{ flash }}
-				<div class="login-group">
+		<div class="container">
+			<h1>REGISTER</h1>
+			<form method="post" action="/register">
+				{% if flash is defined %}
+					{% for i in range(0, flash|length) %}
+					<div class="form-error">{{ flash[i] }}</div>
+					{% endfor %}
+				{% endif %}
+				<div class="form-group">
 					<label>Username</label>
-					<input type="text" name="username">
+					<input class="form-control" type="text" name="username">
 				</div>
-				<div class="login-group">
+				<div class="form-group">
 					<label>Fullname</label>
-					<input type="text" name="fname">
+					<input class="form-control" type="text" name="fname">
 				</div>
-				<div class="login-group">
+				<div class="form-group">
 					<label>Password</label>
-					<input type="password" name="password">
+					<input class="form-control" type="password" name="password">
 				</div>
-				<div class="login-group">
+				<div class="form-group">
 					<label>Repeat the password</label>
-					<input type="password" name="rpassword">
+					<input class="form-control" type="password" name="rpassword">
 				</div>
-				<button type="submit">Submit</button>
+				<button class="btn btn-primary submit" type="submit">Submit</button>
 			</form>
 		</div>
 	</body>
